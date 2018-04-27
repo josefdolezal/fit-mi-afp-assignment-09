@@ -12,8 +12,7 @@ This time the task is up to you from scratch so you will learn how to make web a
 
 Routes:
 
-* `GET /` = static page with info and list to `/finance`
-* `GET /finance` = list with total and simple form for new record (most recent on top), in list is possible to delete record by clicking a button
+* `GET /` = list with total (sum, most recent on top) and simple form for new record, in list is possible to delete record by clicking a button
 * `POST /finance` = create new record (then redirect to list)
 * `DELETE /finance/<id>` = update existing record (then redirect to  list)
 
