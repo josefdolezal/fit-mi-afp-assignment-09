@@ -4,9 +4,9 @@
 /static StaticR Static appStatic
 
 /favicon.ico FaviconR GET
-/robots.txt RobotsR GET
+/robots.txt  RobotsR  GET
 
 / HomeR GET
 
-/finance FinanceR       POST
-/finances FinanceRecordR GET PUT DELETE
+/finance           FinanceR       POST
+/finances/#Integer FinanceRecordR GET PUT DELETE

@@ -11,4 +11,4 @@ import Model.FinanceRecord
 postFinanceR :: Handler Html
 postFinanceR = defaultLayout $ do
     let records = [] :: [FinanceRecord]
-    $(widgetFile "homepage")
+    redirect HomeR

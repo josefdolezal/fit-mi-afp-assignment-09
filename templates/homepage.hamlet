@@ -2,34 +2,34 @@
     <div .bs-docs-section>
         <div .row>
             <div .col-lg-12>
-                <div .page-header>
-                    <h1>List of financial records
+                <h1>List of financial records
 
-                    $if null records
-                        <p>Oops, no records yet! 
-                    $else
-                        <table .table-striped .table>
-                            <thead>
+                $if null records
+                    <p>Oops, no records yet! 
+                $else
+                    <table .table-striped .table>
+                        <thead>
+                            <tr>
+                                <td>ID
+                                <td>Description
+                                <td>Amount
+                                <td>Creation
+                                <td>
+                                <td>
+                        <tbody>
+                            $forall (FinanceRecord id description amount creation) <- records
                                 <tr>
-                                    <td>ID
-                                    <td>Description
-                                    <td>Amount
-                                    <td>Creation
-                                    <td>
-                                    <td>
-                            <tbody>
-                                $forall (FinanceRecord id description amount creation) <- records
-                                    <tr>
-                                        <td>#{id}
-                                        <td>#{description}
-                                        <td>#{amount}
-                                        <td>#{creation}
-                                        <td>Update
-                                        <td>Delete
+                                    <td>#{id}
+                                    <td>#{description}
+                                    <td>#{amount}
+                                    <td>#{creation}
+                                    <td><a href=@{FinanceR id)> Update
+                                    <td>Delete
 
-        <div .row>    
-            <h2>Or create new record
-            <form .form-inline method=POST>
-                <div .form-group .mx-sm-3 .mb-2>
-                    <input type=text .form-control id=amount placeholder=Amount>
-                <button type=submit .btn .btn-primary .mb-2>Submit
+        <div .row>
+            <div .col-lg-12>
+                <h2>Or create new record
+                <form .form-inline method=POST>
+                    <div .form-group .mx-sm-3 .mb-2>
+                        <input type=text .form-control id=amount placeholder=Amount>
+                    <button type=submit .btn .btn-primary .mb-2>Submit
