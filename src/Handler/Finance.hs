@@ -6,8 +6,9 @@
 module Handler.Finance where
 
 import Import
+import Model.FinanceRecord
 
 postFinanceR :: Handler Html
 postFinanceR = defaultLayout $ do
-    let handlerName = "getHomeR" :: Text
+    let records = [] :: [FinanceRecord]
     $(widgetFile "homepage")
