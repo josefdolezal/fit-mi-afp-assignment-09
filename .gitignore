@@ -53,5 +53,7 @@ Temporary Items
 
 *.sqlite3*
 
+tmp
+
 # End of https://www.gitignore.io/api/macos
 

@@ -10,28 +10,23 @@
                     <table .table-striped .table>
                         <thead>
                             <tr>
-                                <td>ID
                                 <td>Description
                                 <td>Amount
                                 <td>Creation
                                 <td>
                                 <td>
                         <tbody>
-                            $forall (FinanceRecord description amount creation) <- records
+                            $forall Entity id record <- records
                                 <tr>
-                                    <td>10000
-                                    <td>#{description}
-                                    <td>#{amount}
-                                    <td>#{creation}
-                                    <td><a href=record> Update
+                                    <td>#{financeRecordDescription record}
+                                    <td>#{financeRecordAmount record}
+                                    <td>#{financeRecordTimeStamp record}
+                                    <td><a href=@{FinanceRecordR id}> Update
                                     <td>Delete
 
         <div .row>
             <div .col-lg-12>
                 <h2>You can also create a new record
-                <form .form-inline method=POST action=@{FinanceR}>
-                    <div .form-group .mx-sm-3 .mb-2>
-                        <input type=text .form-control id=description placeholder=Description>
-                    <div .form-group .mx-sm-3 .mb-2>
-                        <input type=text .form-control id=amount placeholder=Amount>
+                <form .form-inline method=POST action=@{HomeR}>
+                    ^{widget}
                     <button type=submit .btn .btn-primary .mb-2>Submit
