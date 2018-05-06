@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7a57fba1ae50a4696b6b933360f54a0a5fb21a2b1692fa4afc827c42a13deedf
+-- hash: 78a2fc53cabf3cafa0b1a55bd2a7aa7f0b08461753b9fadc72cd8418eb7d900c
 
 name:           finance-log
 version:        0.0.0
@@ -77,7 +77,6 @@ library
       Import
       Import.NoFoundation
       Model
-      Model.FinanceRecord
       Settings
       Settings.StaticFiles
   other-modules:

@@ -17,13 +17,13 @@
                                 <td>
                                 <td>
                         <tbody>
-                            $forall (FinanceRecord id description amount creation) <- records
+                            $forall (FinanceRecord description amount creation) <- records
                                 <tr>
-                                    <td>#{id}
+                                    <td>10000
                                     <td>#{description}
                                     <td>#{amount}
                                     <td>#{creation}
-                                    <td><a href=@{FinanceRecordR id}> Update
+                                    <td><a href=@{FinanceRecordR 10000}> Update
                                     <td>Delete
 
         <div .row>

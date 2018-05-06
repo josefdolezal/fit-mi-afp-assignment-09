@@ -6,7 +6,6 @@
 module Handler.Finance where
 
 import Import
-import Model.FinanceRecord
 
 getFinanceR :: Handler Html
 getFinanceR = defaultLayout $ do

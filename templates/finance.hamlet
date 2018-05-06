@@ -2,17 +2,17 @@
     <div .bs-docs-section>
         <div .row>
             <div .col-lg-12>
-                <h1>#{frDescription record}
-                <p> You spent #{frAmount record}
+                <h1>#{financeRecordDescription record}
+                <p> You spent #{financeRecordAmount record}
 
                 <hr>
                 <h3> You can also update the record
                 <form>
                     <div .form-group>
                         <label for=description>Description
-                        <input type=text .form-control id=description value=#{frDescription record}>
+                        <input type=text .form-control id=description value=#{financeRecordDescription record}>
                     <div .form-group>
                         <label for=amount>Amount
-                        <input type=text .form-control id=amount value=#{frAmount record}>
-                    <a href=@{FinanceRecordR (frId record)} .btn .btn-danger>Delete
+                        <input type=text .form-control id=amount value=#{financeRecordAmount record}>
+                    <a href=@{FinanceRecordR 9000} .btn .btn-danger>Delete
                     <button type=submit .btn .btn-primary>Update

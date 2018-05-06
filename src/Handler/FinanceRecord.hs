@@ -6,17 +6,16 @@
 module Handler.FinanceRecord where
 
 import Import
-import Model.FinanceRecord
 
-getFinanceRecordR :: FinanceRecordId -> Handler Html
+getFinanceRecordR :: Integer -> Handler Html
 getFinanceRecordR id = defaultLayout $ do
-    let record = (FinanceRecord id "a" 1 1)
+    let record = (FinanceRecord "a" 1 1)
     $(widgetFile "finance")
 
-putFinanceRecordR :: FinanceRecordId -> Handler Html
+putFinanceRecordR :: Integer -> Handler Html
 putFinanceRecordR id = defaultLayout $ do
-    redirect (FinanceRecordR id)
+    redirect (FinanceRecordR 1000)
 
-deleteFinanceRecordR :: FinanceRecordId -> Handler Html
+deleteFinanceRecordR :: Integer -> Handler Html
 deleteFinanceRecordR id = defaultLayout $ do
-    redirect (FinanceRecordR id)
+    redirect (FinanceRecordR 1000)
