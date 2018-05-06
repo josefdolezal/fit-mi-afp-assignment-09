@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bbb56b73c8712efe5f59619506da6006771aefab4c4ffaaa8f94e4d038c70562
+-- hash: 7a57fba1ae50a4696b6b933360f54a0a5fb21a2b1692fa4afc827c42a13deedf
 
 name:           finance-log
 version:        0.0.0
@@ -42,6 +42,9 @@ library
     , http-conduit >=2.3 && <2.4
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
+    , persistent >=2.8 && <2.9
+    , persistent-sqlite >=2.8 && <2.9
+    , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
     , template-haskell
@@ -55,6 +58,7 @@ library
     , warp >=3.0 && <3.3
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
+    , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
     , yesod-form >=1.6 && <1.7
     , yesod-static >=1.6 && <1.7
@@ -72,6 +76,7 @@ library
       Handler.Home
       Import
       Import.NoFoundation
+      Model
       Model.FinanceRecord
       Settings
       Settings.StaticFiles
@@ -105,6 +110,9 @@ executable finance-log
     , http-conduit >=2.3 && <2.4
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
+    , persistent >=2.8 && <2.9
+    , persistent-sqlite >=2.8 && <2.9
+    , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
     , template-haskell
@@ -118,6 +126,7 @@ executable finance-log
     , warp >=3.0 && <3.3
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
+    , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
     , yesod-form >=1.6 && <1.7
     , yesod-static >=1.6 && <1.7
@@ -154,8 +163,12 @@ test-suite finance-log-test
     , hspec >=2.0.0
     , http-client-tls >=0.3 && <0.4
     , http-conduit >=2.3 && <2.4
+    , microlens
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
+    , persistent >=2.8 && <2.9
+    , persistent-sqlite >=2.8 && <2.9
+    , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
     , template-haskell
@@ -169,13 +182,16 @@ test-suite finance-log-test
     , warp >=3.0 && <3.3
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
+    , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
     , yesod-form >=1.6 && <1.7
     , yesod-static >=1.6 && <1.7
     , yesod-test
   other-modules:
+      Handler.CommentSpec
       Handler.CommonSpec
       Handler.HomeSpec
+      Handler.ProfileSpec
       TestImport
       Paths_finance_log
   default-language: Haskell2010
