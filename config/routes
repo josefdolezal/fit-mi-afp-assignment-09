@@ -9,5 +9,5 @@
 
 / HomeR GET
 
-/finance           FinanceR       POST
+/finance           FinanceR       GET POST
 /finances/#Integer FinanceRecordR GET PUT DELETE
