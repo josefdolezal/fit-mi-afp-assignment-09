@@ -23,7 +23,7 @@
                                     <td>#{description}
                                     <td>#{amount}
                                     <td>#{creation}
-                                    <td><a href=@{FinanceRecordR 10000}> Update
+                                    <td><a href=record> Update
                                     <td>Delete
 
         <div .row>

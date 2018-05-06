@@ -1,0 +1,12 @@
+<div .container>
+    <div .bs-docs-section>
+        <div .row>
+            <div .col-lg-12>
+                <h1>#{financeRecordDescription record}
+                <p>You spent #{financeRecordAmount record}
+
+                <hr>
+                <h3>You can also update the record
+                <form method=POST>
+                    ^{widget}
+                    <button type=submit .btn .btn-primary>Update
