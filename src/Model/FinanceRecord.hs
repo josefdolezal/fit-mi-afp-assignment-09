@@ -1,6 +1,5 @@
 module Model.FinanceRecord where
 
-import Data.Time
 import qualified Data.Text as T
 
 type FinanceRecordId = Integer

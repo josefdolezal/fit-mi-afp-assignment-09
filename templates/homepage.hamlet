@@ -23,13 +23,15 @@
                                     <td>#{description}
                                     <td>#{amount}
                                     <td>#{creation}
-                                    <td><a href=@{FinanceR id)> Update
+                                    <td><a href=@{FinanceRecordR id}> Update
                                     <td>Delete
 
         <div .row>
             <div .col-lg-12>
-                <h2>Or create new record
-                <form .form-inline method=POST>
+                <h2>You can also create a new record
+                <form .form-inline method=POST action=@{FinanceR}>
+                    <div .form-group .mx-sm-3 .mb-2>
+                        <input type=text .form-control id=description placeholder=Description>
                     <div .form-group .mx-sm-3 .mb-2>
                         <input type=text .form-control id=amount placeholder=Amount>
                     <button type=submit .btn .btn-primary .mb-2>Submit

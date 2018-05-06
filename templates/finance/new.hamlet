@@ -1,0 +1,16 @@
+<div .container>
+    <div .bs-docs-section>
+        <div .row>
+            <div .col-lg-12>
+                <h1>Create new finance record
+
+                <form method=POST action=@{FinanceR}>
+                    ^{widget}
+                    <div .form-group>
+                        <label for=description>Description
+                        <input type=text .form-control id=description value=#{frDescription record}>
+                    <div .form-group>
+                        <label for=amount>Amount
+                        <input type=text .form-control id=amount value=#{frAmount record}>
+                    <a href=@{FinanceRecordR (frId record)} .btn .btn-danger>Delete
+                    <button type=submit .btn .btn-primary>Update
