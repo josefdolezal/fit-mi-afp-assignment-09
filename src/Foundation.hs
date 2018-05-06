@@ -114,11 +114,11 @@ instance Yesod App where
                     , menuItemRoute = HomeR
                     , menuItemAccessCallback = True
                     }
-                -- , NavbarLeft $ MenuItem
-                --     { menuItemLabel = "Profile"
-                --     , menuItemRoute = ProfileR
-                --     , menuItemAccessCallback = isJust muser
-                --     }
+                , NavbarLeft $ MenuItem
+                    { menuItemLabel = "Add new entry"
+                    , menuItemRoute = FinanceR
+                    , menuItemAccessCallback = True
+                    }
                 ]
 
         let navbarLeftMenuItems = [x | NavbarLeft x <- menuItems]
@@ -193,8 +193,8 @@ instance YesodBreadcrumbs App where
         :: Route App  -- ^ The route the user is visiting currently.
         -> Handler (Text, Maybe (Route App))
     breadcrumb HomeR = return ("Home", Nothing)
-    -- breadcrumb ProfileR = return ("Profile", Just HomeR)
-    breadcrumb  _ = return ("home", Nothing)
+    breadcrumb FinanceR = return ("Add new entry", Just HomeR)
+    breadcrumb (FinanceRecordR _) = return ("Update entry", Just HomeR)
 
 -- How to run database actions.
 instance YesodPersist App where
