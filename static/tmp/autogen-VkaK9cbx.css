@@ -1,0 +1,32 @@
+.masthead,.navbar {
+    background-color: rgb(27, 28, 29);
+}
+.navbar-default .navbar-nav > .active > a {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+.navbar-nav {
+    padding-bottom: 1em;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout-info {
+    border-left-color: #1b809e;
+}
+.bs-docs-section {
+    margin-bottom: 60px;
+}
+.bs-docs-section:last-child {
+    margin-bottom: 0;
+}
+#message {
+    margin-bottom: 40px;
+}

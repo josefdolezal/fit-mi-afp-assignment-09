@@ -1,0 +1,32 @@
+<div .container>
+    <div .bs-docs-section>
+        <div .row>
+            <div .col-lg-12>
+                <h1>List of financial records
+
+                $if null records
+                    <p>Oops, no records yet! 
+                $else
+                    <table .table-striped .table>
+                        <thead>
+                            <tr>
+                                <td>Description
+                                <td>Amount
+                                <td>Creation
+                                <td>
+                                <td>
+                        <tbody>
+                            $forall Entity id record <- records
+                                <tr>
+                                    <td>#{financeRecordDescription record}
+                                    <td>#{financeRecordAmount record}
+                                    <td>#{financeRecordTimeStamp record}
+                                    <td><a href=@{FinanceRecordR id}> Update
+                                    <td>Delete
+
+        <div .row>
+            <div .col-lg-12>
+                <h2>You can also create a new record
+                <form .form-inline method=POST action=@{HomeR}>
+                    ^{widget}
+                    <button type=submit .btn .btn-primary .mb-2>Submit
